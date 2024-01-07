@@ -1,0 +1,13 @@
+From 286a8bc8df77c845776cefb77d29ed8ee46dc375 Mon Sep 17 00:00:00 2001
+From: Sergii Piatakov <sergii.piatakov@globallogic.com>
+Date: Thu, 15 Nov 2018 15:28:04 +0200
+Subject: [PATCH 1/2] fix truncation error
+
+To convert float to integer the truncation is performed, but the
+rounding is expected.
+
+Test: Add (4.9, 4.9) should return 10.
+Signed-off-by: Sergii Piatakov <sergii.piatakov@globallogic.com>
+Signed-off-by: Yaroslav Sylenko <roninbean@gmail.com>
+-- 
+2.43.0.windows.1
